@@ -61,6 +61,7 @@ img,
 svg,
 video {
     vertical-align: middle;
+    display: block;
 }
 
 /*
