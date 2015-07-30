@@ -5,42 +5,25 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Daniel Bark</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width = 1050, user-scalable = no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="img/favicon.ico">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="shortcut icon" href="img/favicon.ico">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript" src="lib/turn.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
+        <!-- Add your site or application content here -->
         <p>This is a pretty good cat video.</p>
         <iframe width="640" height="390" src="https://www.youtube.com/embed/58l4n5kor1g" frameborder="0" allowfullscreen></iframe>
-        <div class="flipbook-viewport">
-			<div class="container">
-				<div class="flipbook">
-					<div class="page"> HTML5 </div>
-					<div class="double"> CSS3 </div>
-					<div class="double"> Javascript </div>
-					<div class="double"> Node.js </div>
-					<div class="double"> Ajax & jQuery </div>
-					<div class="double"> Git </div>
-					<div class="double"> C# </div>
-					<div class="page"> Java </div>
-				</div>
-			</div>
-		</div>
-
         <img src="img/html.png" height="115" width="105">
         <img src="img/css.png" height="115" width="105">
         <img src="img/javascript.png" height="115" width="105">
@@ -48,32 +31,21 @@
         <img src="img/ajax.png" height="115" width="105">
         <img src="img/git.png" height="115" width="105">
         <img src="img/csharp.png" height="115" width="105">
-        <img src="img/java.png" height="115" width="105">
 
 
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script type="text/javascript">
-			function loadApp() {
-				var flipbook = $('.flipbook');
 
- 				// Check if the CSS was already loaded
-
-				if (flipbook.width()==0 || flipbook.height()==0) {
-					setTimeout(loadApp, 10);
-					return;
-				}
-
-				$('.flipbook .double').scissor();
-
-				$('.flipbook').turn({
-					elevation: 50,
-					gradients: true,
-					autoCenter: true
-				});
-			}
-		</script>	
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
     </body>
 </html>
