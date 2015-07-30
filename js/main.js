@@ -1,4 +1,4 @@
-$(document).ready( function() {
+$(window).ready( function() {
 	$("img").animate({
 		opacity: 1
 	}, "slow", function() {
