@@ -14,8 +14,9 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="lib/turn.min.js"></script>
+        <script type="text/javascript" src="lib/turn.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -25,19 +26,23 @@
 
         <p>This is a pretty good cat video.</p>
         <iframe width="640" height="390" src="https://www.youtube.com/embed/58l4n5kor1g" frameborder="0" allowfullscreen></iframe>
-        <div id="flipbook">
-			<div class="hard"> Turn.js </div>
-			<div class="hard"></div>
-			<div> HTML5 </div>
-			<div> CSS3 </div>
-			<div> Javascript </div>
-			<div> Node.js </div>
-			<div> Ajax & jQuery </div>
-			<div> Git </div>
-			<div> C# </div>
-			<div> Java </div>
-			<div class="hard"></div>
-			<div class="hard"></div>
+        <div class="flipbook-viewport">
+			<div class="container">
+				<div class="flipbook">
+					<div class="hard"> Turn.js </div>
+					<div class="hard"></div>
+					<div> HTML5 </div>
+					<div> CSS3 </div>
+					<div> Javascript </div>
+					<div> Node.js </div>
+					<div> Ajax & jQuery </div>
+					<div> Git </div>
+					<div> C# </div>
+					<div> Java </div>
+					<div class="hard"></div>
+					<div class="hard"></div>
+				</div>
+			</div>
 		</div>
 
         <img src="img/html.png" height="115" width="105">
@@ -50,18 +55,28 @@
         <img src="img/java.png" height="115" width="105">
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript">
-        	$("#flipbook").turn({
-				width: 400,
-				height: 300,
-				autoCenter: true,
-				display: 'double',
-				acceleration: true
-});
-        </script>
+			function loadApp() {
+				var flipbook = $('.flipbook');
+
+ 				// Check if the CSS was already loaded
+
+				if (flipbook.width()==0 || flipbook.height()==0) {
+					setTimeout(loadApp, 10);
+					return;
+				}
+
+				$('.flipbook .double').scissor();
+
+				$('.flipbook').turn({
+					elevation: 50,
+					gradients: true,
+					autoCenter: true
+				});
+			}
     </body>
 </html>
