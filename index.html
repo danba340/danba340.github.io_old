@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="img/favicon.ico">
         <!-- Place favicon.ico in the root directory -->
         <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -15,15 +15,27 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script type="text/javascript" src="lib/turn.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
+
         <p>This is a pretty good cat video.</p>
         <iframe width="640" height="390" src="https://www.youtube.com/embed/58l4n5kor1g" frameborder="0" allowfullscreen></iframe>
+        <div id="flipbook">
+	<div class="hard"> Turn.js </div>
+	<div class="hard"></div>
+	<div> Page 1 </div>
+	<div> Page 2 </div>
+	<div> Page 3 </div>
+	<div> Page 4 </div>
+	<div class="hard"></div>
+	<div class="hard"></div>
+</div>
+
         <img src="img/html.png" height="115" width="105">
         <img src="img/css.png" height="115" width="105">
         <img src="img/javascript.png" height="115" width="105">
@@ -31,15 +43,18 @@
         <img src="img/ajax.png" height="115" width="105">
         <img src="img/git.png" height="115" width="105">
         <img src="img/csharp.png" height="115" width="105">
+        <img src="img/java.png" height="115" width="105">
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"></script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
+        <script type="text/javascript">
+			
+
+        
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
